@@ -1,2 +1,1 @@
-# Recipes
-Build a basic recipe website
+# Generic Website
