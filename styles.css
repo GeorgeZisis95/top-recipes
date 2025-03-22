@@ -1,47 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
+    /* This ensures borders don't change the box's actual size */
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;   
+    font-family: 'Poppins', sans-serif;
 }
 
 nav {
-    position:fixed;
+    /* Add some space between the bar and the bar's text */
     padding: 10px 0;
     background: #1b1b1b;
+    /* The bar extends to the full width of the page */
     width: 100%;
-    padding:10px 0;
+    /* The bar's layer is above other layers to remain visible */
     z-index: 12;
 }
 
 nav .menu {
     max-width: 1250px;
-    margin: auto; 
+    /* Center elements with margin:auto*/
+    margin: auto;
+    /* Use flexbox to show logo and ul next to each other */
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0 20px;
 }
 
-.menu .logo a{
+/* Decorate the logo */
+.menu .logo {
     text-decoration: none;
     color: #fff;
     font-size: 35px;
     font-weight: 600px;
 }
 
-.menu ul{
+.menu ul {
+    /* Presents the list elements next to each other */
     display: inline-flex;
 }
 
-.menu ul li{
+.menu ul li {
     list-style: none;
     margin-left: 7px;
 }
 
-.menu ul li a{
+/* Decorate the buttons */
+.menu ul li a {
     text-decoration: none;
-    color:#fff;
+    color: #fff;
     font-size: 18px;
     font-weight: 500;
     padding: 8px 15px;
@@ -49,24 +58,74 @@ nav .menu {
     transition: all 0.3s ease;
 }
 
-.menu ul li a:hover{
+.menu ul li a:hover {
     background: #fff;
     color: #000;
 }
 
-.img {
-    background: url(images/pan.jpg) no-repeat;
-    height: 100vh;
+.bg-image {
+    background-image: url(images/img2.jpg);
+    height: 80vh;
     width: 100%;
+    background-position: bottom;
+    background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
-    position:relative;
 }
 
-.img::before{
-    content: '';
+.bg-text {
+    /* Box Decoration */
+    width: 60%;
+    padding: 40px;
+    background-color: rgba(0, 0, 0, 0.0);
+    transition: 0.3s ease;
+    backdrop-filter: blur(15px);
+    box-shadow: 0px 0px 5px #1b1b1b;
+    /* Text Decoration */
+    color: #000;
+    font-size: 20px;
+    font-weight: 600px;
+    text-align: center;
+    /* Position text on top of background div */
     position: absolute;
-    height: 100%;
-    width: 100%;
-    background: rgba(0, 0, 0, 0.4);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -55%);
+    z-index: 2;
+}
+
+.bg-text:hover {
+    color: #fff;
+    background-color: rgba(0, 0, 0, 1);
+}
+
+.bg-text:hover::after {
+    content: "Hello World";
+}
+
+/* Add some padding between the paragraphs */
+.bg-text p {
+    padding: 10px;
+}
+
+.links {
+    background-color: #1b1b1b;
+    height: 50vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: orange;
+}
+
+.links .box {
+    height: 160px;
+    width: 160px;
+    background-color: rgb(206, 111, 111);
+    box-shadow: 0px 0px 15px #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.links .box .food-name {
+    text-align: center;
 }
