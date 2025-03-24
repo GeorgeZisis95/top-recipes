@@ -40,4 +40,4 @@ The text right now appears after the image but I want it inside the image -> Don
 I might make the text change on hover with ::after. -> Done
 
 ### Links
-For the links I'm thinking the box should show an image and when I hove the image it blurs and shows the food title
+For the links I'm thinking the box should show an image and when I hove the image it blurs and shows the food title -> Done
