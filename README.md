@@ -37,7 +37,7 @@ Even if I use a padding top value for the introduction, it still covers it up wh
 
 Okay the background image looks better if not blurred so I want to just blur the part that contains the text -> Done
 The text right now appears after the image but I want it inside the image -> Done
-I might make the text change on hover with ::after.
+I might make the text change on hover with ::after. -> Done
 
-
+### Links
 For the links I'm thinking the box should show an image and when I hove the image it blurs and shows the food title

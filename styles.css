@@ -76,12 +76,12 @@ nav .menu {
     /* Box Decoration */
     width: 60%;
     padding: 40px;
-    background-color: rgba(0, 0, 0, 0.0);
+    background-color: rgba(0, 0, 0, 0.4);
     transition: 0.3s ease;
     backdrop-filter: blur(15px);
     box-shadow: 0px 0px 5px #1b1b1b;
     /* Text Decoration */
-    color: #000;
+    color: #1b1b1b;
     font-size: 20px;
     font-weight: 600px;
     text-align: center;
@@ -93,18 +93,43 @@ nav .menu {
     z-index: 2;
 }
 
+.bg-text p {
+    /* Add some padding between the paragraphs */
+    padding: 10px;
+    /* Makes sure the text doesn't show until hovered */
+    opacity: 0;
+}
+
 .bg-text:hover {
-    color: #fff;
+    /* The background of the box changes to black on hover */
     background-color: rgba(0, 0, 0, 1);
 }
 
-.bg-text:hover::after {
-    content: "Hello World";
+/* And the paragraphs show only when hovered */
+.bg-text:hover p {
+    color: #fff;
+    opacity: 1;
 }
 
-/* Add some padding between the paragraphs */
-.bg-text p {
-    padding: 10px;
+.bg-text::after {
+    /* This is the text that appears when not hovered */
+    content: "What is this page all about? Find out by hovering over this box!";
+    /* To achieve this we set the opacity to 1 */
+    opacity: 1;
+    /* I give it the same position as the paragraph text */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -55%);
+    width: 60%;
+    /* Text Decoration */
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+}
+
+.bg-text:hover::after {
+    opacity: 0;
 }
 
 .links {
