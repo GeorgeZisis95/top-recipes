@@ -41,3 +41,5 @@ I might make the text change on hover with ::after. -> Done
 
 ### Links
 For the links I'm thinking the box should show an image and when I hove the image it blurs and shows the food title -> Done
+I want each box to take me to the respective page. -> Done 
+

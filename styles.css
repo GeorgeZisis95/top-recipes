@@ -8,6 +8,10 @@
     font-family: 'Poppins', sans-serif;
 }
 
+body {
+    background: #1b1b1b;
+}
+
 nav {
     /* Add some space between the bar and the bar's text */
     padding: 10px 0;
@@ -27,6 +31,7 @@ nav .menu {
     align-items: center;
     justify-content: space-between;
     padding: 0 20px;
+    border-bottom: 1px solid white;
 }
 
 /* Decorate the logo */
@@ -63,10 +68,15 @@ nav .menu {
     color: #000;
 }
 
+.introduction {
+    padding: 50px;
+}
+
 .bg-image {
     background-image: url(images/img3.jpg);
     height: 80vh;
-    width: 100%;
+    margin: auto;
+    width: 90%;
     filter: blur(10px);
     background-position: center;
     background-repeat: no-repeat;
@@ -87,9 +97,9 @@ nav .menu {
     text-align: center;
     /* Position text on top of background div */
     position: absolute;
-    top: 50%;
+    top: 60%;
     left: 50%;
-    transform: translate(-50%, -55%);
+    transform: translate(-50%, -50%);
     z-index: 2;
 }
 
@@ -98,8 +108,19 @@ nav .menu {
     padding: 10px;
 }
 
+.header-text {
+    margin: auto;
+    width: 80%;
+    color: #fff;
+    font-size: 35px;
+    font-weight: 600px;
+    padding: 0 20px;
+    border-bottom: 1px solid white;
+}
+
 .links {
-    background-color: #1b1b1b;
+    margin: auto;
+    width: 80%;
     height: 80vh;
     display: flex;
     justify-content: space-evenly;
@@ -113,7 +134,7 @@ nav .menu {
     background-repeat: no-repeat;
     background-size: cover;
     cursor: pointer;
-    box-shadow: inset 0px 0px 10px #fff;
+    box-shadow: inset 0px 0px 20px #1b1b1b;
 }
 
 .links .box1 {
@@ -141,6 +162,7 @@ nav .menu {
     transition: 0.3s ease;
     box-shadow: 0px 0px 5px #1b1b1b;
     /* Text Decoration */
+    text-decoration: none;
     color: #fff;
     font-size: 20px;
     font-weight: 600px;
@@ -152,4 +174,13 @@ nav .menu {
 .links .box .food-name:hover {
     backdrop-filter: blur(10px);
     opacity: 1;
+}
+
+.footer {
+    height: 30vh;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 20px;
 }
