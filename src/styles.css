@@ -18,9 +18,19 @@
     cursor: none;
 }
 
+button {
+    background: none;
+    border: none;
+    padding: 0;
+    font: inherit;
+    color: inherit;
+    cursor: pointer;
+}
+
 body {
     font-size: var(--fs-base);
     background-color: rgb(239, 233, 229);
+    overflow-x: hidden;
 }
 
 .cursor-dot {
@@ -73,7 +83,7 @@ header .container:hover {
 
 main .container {
     padding-top: var(--pad);
-    padding-bottom: var(--pad);
+    padding-bottom: 12%;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 35vw));
     grid-auto-rows: minmax(100px, auto);
@@ -83,6 +93,7 @@ main .container {
 }
 
 main .container button {
+    border-radius: 25%;
     width: 40%;
     aspect-ratio: 1;
     display: flex;
@@ -100,12 +111,19 @@ main .container button:hover {
 
 @media (max-width:500px) {
     main .container button {
+        border-radius: 0;
         width: 100%;
         aspect-ratio: 0;
     }
 }
 
+main .hide {
+    display: none;
+}
+
 footer {
+    position: fixed;
+    bottom: 0;
     width: 100%;
     background-color: #1a1a1a;
     color: #fff;
@@ -119,4 +137,21 @@ footer:hover {
 footer .container {
     display: flex;
     justify-content: center;
+}
+
+.reset-button {
+    border-radius: 25%;
+    width: 20%;
+    aspect-ratio: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 72, 0);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.reset-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    background-color: rgb(249, 91, 43);
 }

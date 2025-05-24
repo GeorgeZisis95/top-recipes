@@ -1,34 +1,16 @@
 import "./styles.css";
+import { createCursor } from "./cursor";
+import { viewRecipeA } from "./rec_a";
+import { viewRecipeB } from "./rec_b";
 
-const cursorDot = document.querySelector(".cursor-dot")
-const cursorOutline = document.querySelector(".cursor-outline")
+createCursor()
 
-window.addEventListener("mousemove", (event) => {
-    const posX = event.clientX
-    const posY = event.clientY
+const recipeButtons = Array.from(document.querySelectorAll(".recipe"))
 
-    cursorDot.style.left = `${posX}px`
-    cursorDot.style.top = `${posY}px`
+recipeButtons[0].addEventListener("click", () => {
+    viewRecipeA()
+})
 
-    cursorOutline.style.left = `${posX}px`
-    cursorOutline.style.top = `${posY}px`
-
-    cursorOutline.animate(
-        {
-            left: `${posX}px`,
-            top: `${posY}px`,
-        },
-        {
-            duration: 500,
-            fill: "backwards"
-        }
-    )
-
-    if (event.target.nodeName === "BUTTON") {
-        cursorDot.classList.add("active")
-        cursorOutline.classList.add("active")
-    } else {
-        cursorDot.classList.remove("active")
-        cursorOutline.classList.remove("active")
-    }
+recipeButtons[1].addEventListener("click", () => {
+    viewRecipeB()
 })
