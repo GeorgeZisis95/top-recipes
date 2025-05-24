@@ -1,16 +1,12 @@
 import "./styles.css";
 import { createCursor } from "./cursor";
-import { viewRecipeA } from "./rec_a";
-import { viewRecipeB } from "./rec_b";
+import { viewRecipe } from "./toggle_view";
 
 createCursor()
 
 const recipeButtons = Array.from(document.querySelectorAll(".recipe"))
-
-recipeButtons[0].addEventListener("click", () => {
-    viewRecipeA()
-})
-
-recipeButtons[1].addEventListener("click", () => {
-    viewRecipeB()
-})
+for (let i = 0; i < recipeButtons.length; i++) {
+    recipeButtons[i].addEventListener("click", () => {
+        viewRecipe(i)
+    })
+}
