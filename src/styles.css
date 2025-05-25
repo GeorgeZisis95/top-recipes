@@ -7,6 +7,10 @@
     --fs-h1: 2rem;
     --fs-h2: 1.5rem;
     --fs-h3: 1.3rem;
+
+    --orange-bold: rgb(255, 72, 0);
+    --orange-bold-hover: rgb(249, 91, 43);
+    --tomato: #FF6347;
 }
 
 * {
@@ -25,6 +29,15 @@ button {
     font: inherit;
     color: inherit;
     cursor: none;
+}
+
+h1 {
+    font-size: var(--fs-h1);
+}
+
+h3 {
+    font-size: var(--fs-h3);
+    font-weight: 500;
 }
 
 body {
@@ -73,10 +86,6 @@ header .container {
     transition: transform 0.2s ease;
 }
 
-header .container h1 {
-    font-size: var(--fs-h1);
-}
-
 header .container:hover {
     transform: scale(1.1);
 }
@@ -99,14 +108,14 @@ main .container button {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(255, 72, 0);
+    background-color: var(--orange-bold);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 main .container button:hover {
     transform: scale(1.1);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    background-color: rgb(249, 91, 43);
+    background-color: var(--orange-bold-hover);
 }
 
 @media (max-width:500px) {
@@ -154,4 +163,20 @@ footer .container {
     transform: scale(1.1);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     background-color: rgb(249, 91, 43);
+}
+
+.recipe-container {
+    display: grid;
+}
+
+.title {
+    padding: var(--pad);
+    background-color: var(--tomato);
+    border: 1px solid black;
+    width: 30%;
+}
+
+.instructions {
+    padding: var(--pad);
+    background-color: var(--tomato);
 }
