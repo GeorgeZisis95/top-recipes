@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tasty Recipes</title>
+    <title>Odin Recipes</title>
 <script defer src="main.js"></script></head>
 
 <body>
@@ -18,16 +18,346 @@
     </header>
     <main>
         <div class="container">
-            <button class="recipe" data-recipe="first"> Content </button>
-            <button class="recipe" data-recipe="second"> Content </button>
-            <button class="recipe" data-recipe="third"> Content </button>
-            <button class="recipe" data-recipe="fourth"> Content </button>
+            <button class="recipe" data-recipe="first"> Dish One </button>
+            <button class="recipe" data-recipe="second"> Dish Two </button>
+            <button class="recipe" data-recipe="third"> Dish Three </button>
+            <button class="recipe" data-recipe="fourth"> Dish Four </button>
         </div>
-        <div class="recipe-container hide"></div>
+        <div class="recipe-container hide" data-number=0>
+            <button class="reset-button">Return to Home</button>
+            <div class="title">
+                <h1>Creamy Garlic Herb Chicken</h1>
+                <p>A comforting skillet chicken dish smothered in a velvety garlic-herb cream sauce —
+                    perfect for weeknight dinners.</p>
+            </div>
+            <div class="ingredients">
+                <h3>You will need:</h3>
+                <ul>
+                    <li>
+                        <p>4 boneless, skinless chicken breasts</p>
+                    </li>
+                    <li>
+                        <p>1 tablespoon olive oil</p>
+                    </li>
+                    <li>
+                        <p>2 tablespoons butter</p>
+                    </li>
+                    <li>
+                        <p>5 garlic cloves, minced</p>
+                    </li>
+                    <li>
+                        <p>1 teaspoon dried thyme</p>
+                    </li>
+                    <li>
+                        <p>1 teaspoon dried oregano</p>
+                    </li>
+                    <li>
+                        <p>½ teaspoon chili flakes (optional)</p>
+                    </li>
+                    <li>
+                        <p>1 cup heavy cream</p>
+                    </li>
+                    <li>
+                        <p>½ cup chicken broth</p>
+                    </li>
+                    <li>
+                        <p>½ cup grated parmesan cheese</p>
+                    </li>
+                    <li>
+                        <p>Salt and pepper to taste</p>
+                    </li>
+                    <li>
+                        <p>Fresh parsley for garnish</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="instructions">
+                <ol>
+                    <li>
+                        <h3>Prep the Chicken:</h3>
+                        <p>Pat the chicken breasts dry with paper towels. Season both sides with salt and pepper.</p>
+                    </li>
+                    <li>
+                        <h3>Sear the Chicken:</h3>
+                        <p>In a large skillet over medium heat, heat the olive oil and 1 tablespoon of butter. Add the
+                            chicken breasts and sear for
+                            about 5-6 minutes per side, or until golden and cooked through. Remove from the skillet and
+                            set aside.</p>
+                    </li>
+                    <li>
+                        <h3>Make the Sauce:</h3>
+                        <p>In the same skillet, melt the remaining 1 tablespoon of butter. Add the minced garlic and
+                            sauté for about 30 seconds
+                            until fragrant. Stir in thyme, oregano, and chili flakes if using.</p>
+                    </li>
+                    <li>
+                        <h3>Add Liquids:</h3>
+                        <p>Pour in the chicken broth and let it simmer for 2 minutes, scraping up any browned bits from
+                            the pan. Add the heavy
+                            cream and parmesan cheese. Stir until the cheese is melted and the sauce is smooth.</p>
+                    </li>
+                    <li>
+                        <h3>Combine:</h3>
+                        <p>Return the chicken to the skillet and coat it in the sauce. Let it simmer on low heat for
+                            another 5 minutes, allowing
+                            the flavors to meld.</p>
+                    </li>
+                    <li>
+                        <h3>Garnish & Serve:</h3>
+                        <p>Sprinkle with fresh parsley. Serve hot over mashed potatoes, rice, or pasta for a complete
+                            meal.</p>
+                    </li>
+                </ol>
+            </div>
+
+
+        </div>
+        <div class="recipe-container hide" data-number=1>
+            <button class="reset-button">Return to Home</button>
+            <div class="title">
+                <h1>Smoky Chickpea & Spinach Stew</h1>
+                <p>A hearty, protein-packed stew with smoky paprika, tender chickpeas, and vibrant spinach — all
+                    simmered in a rich tomato broth.</p>
+            </div>
+            <div class="ingredients">
+                <h3>You will need:</h3>
+                <ul>
+                    <li>
+                        <p>2 tablespoons olive oil</p>
+                    </li>
+                    <li>
+                        <p>1 yellow onion, diced</p>
+                    </li>
+                    <li>
+                        <p>3 garlic cloves, minced</p>
+                    </li>
+                    <li>
+                        <p>1 teaspoon smoked paprika</p>
+                    </li>
+                    <li>
+                        <p>½ teaspoon ground cumin</p>
+                    </li>
+                    <li>
+                        <p>½ teaspoon chili flakes (optional)</p>
+                    </li>
+                    <li>
+                        <p>1 can (14 oz) crushed tomatoes</p>
+                    </li>
+                    <li>
+                        <p>2 cans (14 oz each) chickpeas, drained and rinsed</p>
+                    </li>
+                    <li>
+                        <p>2 cups vegetable broth</p>
+                    </li>
+                    <li>
+                        <p>4 cups fresh spinach</p>
+                    </li>
+                    <li>
+                        <p>Salt and pepper to taste</p>
+                    </li>
+                    <li>
+                        <p>Juice of ½ lemon</p>
+                    </li>
+                    <li>
+                        <p>Fresh parsley or cilantro for garnish</p>
+                    </li>
+                    <li>
+                        <p>Crusty bread (for serving)</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="instructions">
+                <ol>
+                    <li>
+                        <h3>Sauté the Aromatics:</h3>
+                        <p>In a large pot, heat the olive oil over medium heat. Add the diced onion and cook for 5-6
+                            minutes, until soft and
+                            translucent. Stir in the garlic, smoked paprika, cumin, and chili flakes. Cook for another
+                            30 seconds until fragrant.</p>
+                    </li>
+                    <li>
+                        <h3>Add Tomatoes & Chickpeas:</h3>
+                        <p>Pour in the crushed tomatoes and stir well to combine. Add the chickpeas and vegetable broth.
+                            Season with salt and
+                            pepper. Bring to a boil, then reduce heat and let simmer for 15-20 minutes.</p>
+                    </li>
+                    <li>
+                        <h3>Add Spinach:</h3>
+                        <p>Stir in the fresh spinach and cook for 2-3 minutes until wilted.</p>
+                    </li>
+                    <li>
+                        <h3>Finish & Serve:</h3>
+                        <p>Squeeze in the lemon juice and taste for seasoning. Ladle the stew into bowls and top with
+                            fresh herbs. Serve with warm, crusty bread on the side.</p>
+                    </li>
+                </ol>
+            </div>
+        </div>
+        <div class="recipe-container hide" data-number=2>
+            <button class="reset-button">Return to Home</button>
+            <div class="title">
+                <h1>Sun-Dried Tomato & Mushroom Cream Pasta</h1>
+                <p>A luscious pasta tossed in a garlicky sun-dried tomato cream sauce with sautéed mushrooms and a hint
+                    of parmesan.</p>
+            </div>
+            <div class="ingredients">
+                <h3>You will need:</h3>
+                <ul>
+                    <li>
+                        <p>250g (9 oz) fettuccine or pasta of choice</p>
+                    </li>
+                    <li>
+                        <p>2 tablespoons olive oil</p>
+                    </li>
+                    <li>
+                        <p>3 garlic cloves, minced</p>
+                    </li>
+                    <li>
+                        <p>1 cup sliced mushrooms (button or cremini)</p>
+                    </li>
+                    <li>
+                        <p>½ cup sun-dried tomatoes in oil, chopped</p>
+                    </li>
+                    <li>
+                        <p>1 cup heavy cream</p>
+                    </li>
+                    <li>
+                        <p>½ cup grated parmesan cheese</p>
+                    </li>
+                    <li>
+                        <p>Salt and pepper to taste</p>
+                    </li>
+                    <li>
+                        <p>½ teaspoon chili flakes (optional)</p>
+                    </li>
+                    <li>
+                        <p>Fresh basil or parsley, chopped (for garnish)</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="instructions">
+                <ol>
+                    <li>
+                        <h3>Cook the Pasta:</h3>
+                        <p>Bring a large pot of salted water to a boil. Cook the pasta according to package instructions
+                            until al dente. Drain and reserve ½ cup of pasta water.</p>
+                    </li>
+                    <li>
+                        <h3>Sauté the Vegetables:</h3>
+                        <p>In a large skillet, heat the olive oil over medium heat. Add the garlic and sauté for 30
+                            seconds. Add the mushrooms and cook for 4-5 minutes, until golden and tender.</p>
+                    </li>
+                    <li>
+                        <h3>Build the Sauce:</h3>
+                        <p>Stir in the chopped sun-dried tomatoes and let them warm through for 1-2 minutes. Pour in the
+                            heavy cream and reduce
+                            heat to low. Add chili flakes if you like a bit of heat. Simmer gently for 3-4 minutes.</p>
+                    </li>
+                    <li>
+                        <h3>Add Cheese & Combine:</h3>
+                        <p>Stir in the parmesan cheese and mix until the sauce is smooth and creamy. Add the cooked
+                            pasta and a splash of reserved pasta water if needed to loosen the sauce.</p>
+                    </li>
+                    <li>
+                        <h3>Finish & Serve:</h3>
+                        <p>Season with salt and pepper to taste. Toss everything together and serve hot, garnished with
+                            chopped fresh basil or parsley.</p>
+                    </li>
+                </ol>
+            </div>
+        </div>
+        <div class="recipe-container hide" data-number=3>
+            <button class="reset-button">Return to Home</button>
+            <div class="title">
+                <h1>Cinnamon Apple Crumble</h1>
+                <p>Warm, spiced apples baked beneath a golden, buttery oat topping — the ultimate comfort dessert with a
+                    scoop of vanilla ice cream.</p>
+            </div>
+            <div class="ingredients">
+                <h3>For the Apple Filling:</h3>
+                <ul>
+                    <li>
+                        <p>5 medium apples (Granny Smith or Honeycrisp), peeled and sliced</p>
+                    </li>
+                    <li>
+                        <p>2 tablespoons granulated sugar</p>
+                    </li>
+                    <li>
+                        <p>1 tablespoon brown sugar</p>
+                    </li>
+                    <li>
+                        <p>1 teaspoon ground cinnamon</p>
+                    </li>
+                    <li>
+                        <p>¼ teaspoon ground nutmeg</p>
+                    </li>
+                    <li>
+                        <p>1 tablespoon lemon juice</p>
+                    </li>
+                    <li>
+                        <p>1 tablespoon all-purpose flour</p>
+                    </li>
+                </ul>
+                <h3>For the Crumble Topping:</h3>
+                <ul>
+                    <li>
+                        <p>½ cup all-purpose flour</p>
+                    </li>
+                    <li>
+                        <p>½ cup old-fashioned oats</p>
+                    </li>
+                    <li>
+                        <p>⅓ cup brown sugar</p>
+                    </li>
+                    <li>
+                        <p>¼ teaspoon salt</p>
+                    </li>
+                    <li>
+                        <p>½ teaspoon cinnamon</p>
+                    </li>
+                    <li>
+                        <p>6 tablespoons cold unsalted butter, cubed</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="instructions">
+                <ol>
+                    <li>
+                        <h3>Preheat the Oven:</h3>
+                        <p>Set your oven to 180°C (350°F). Lightly grease a medium-sized baking dish.</p>
+                    </li>
+                    <li>
+                        <h3>Prepare the Apples:</h3>
+                        <p>In a large mixing bowl, toss the sliced apples with sugar, brown sugar, cinnamon, nutmeg,
+                            lemon juice, and flour until
+                            evenly coated. Transfer the mixture to the greased baking dish.</p>
+                    </li>
+                    <li>
+                        <h3>Make the Crumble Topping:</h3>
+                        <p>In another bowl, combine the flour, oats, brown sugar, salt, and cinnamon. Add the cold
+                            butter cubes and use your
+                            fingers or a pastry cutter to work the butter in until the mixture resembles coarse crumbs.
+                        </p>
+                    </li>
+                    <li>
+                        <h3>Assemble & Bake:</h3>
+                        <p>Sprinkle the crumble topping evenly over the apples. Bake for 35-40 minutes, or until the top
+                            is golden brown and the
+                            apples are bubbly and soft.</p>
+                    </li>
+                    <li>
+                        <h3>Serve Warm:</h3>
+                        <p>Let it cool for 5-10 minutes before serving. Best enjoyed warm with a scoop of vanilla ice
+                            cream or a dollop of whipped
+                            cream.</p>
+                    </li>
+                </ol>
+            </div>
+        </div>
     </main>
     <footer>
         <div class="container">
-            <p>Footer Content</p>
+            <p>For more amazing websites, find me on: TBA</p>
         </div>
     </footer>
 </body>
