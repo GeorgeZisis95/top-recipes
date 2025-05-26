@@ -11,6 +11,8 @@
     --orange-bold: rgb(255, 72, 0);
     --orange-bold-hover: rgb(249, 91, 43);
     --tomato: #FF6347;
+    --tomato-hover: #FF6C52;
+    --peach: #FFDAB9;
 }
 
 * {
@@ -40,10 +42,19 @@ h3 {
     font-weight: 500;
 }
 
+ul {
+    list-style-type: none;
+}
+
+ul li {
+    padding: 2px;
+}
+
 body {
     font-size: var(--fs-base);
     background-color: rgb(239, 233, 229);
     overflow-x: hidden;
+    background-color: var(--peach);
 }
 
 .cursor-dot {
@@ -108,14 +119,14 @@ main .container button {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--orange-bold);
+    background-color: var(--tomato);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 main .container button:hover {
     transform: scale(1.1);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    background-color: var(--orange-bold-hover);
+    background-color: var(--tomato-hover);
 }
 
 @media (max-width:500px) {
@@ -148,35 +159,83 @@ footer .container {
     justify-content: center;
 }
 
+.title {
+    padding: var(--pad);
+    padding-bottom: 0;
+    text-align: center;
+    transition: transform 0.2s ease;
+}
+
+.title:hover {
+    transform: scale(1.1);
+}
+
+.ingredients {
+    float: right;
+    margin: 3% 4% 3% 5%;
+    width: 30%;
+    padding: var(--pad);
+    background-color: var(--tomato);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.ingredients:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    background-color: var(--tomato-hover);
+}
+
+.instructions {
+    padding: var(--pad);
+    padding-top: 1%;
+    margin-bottom: 4%;
+    background-color: var(--peach);
+}
+
+ol li {
+    transition: transform 0.2s ease;
+}
+
+ol li:hover {
+    transform: translateX(3%) scale(1.05);
+}
+
 .reset-button {
-    border-radius: 25%;
-    width: 20%;
-    aspect-ratio: 1;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(255, 72, 0);
+    background-color: var(--tomato);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .reset-button:hover {
     transform: scale(1.1);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    background-color: rgb(249, 91, 43);
+    background-color: var(--tomato-hover);
 }
 
-.recipe-container {
-    display: grid;
-}
+@media (max-width:830px) {
+    .recipe-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
 
-.title {
-    padding: var(--pad);
-    background-color: var(--tomato);
-    border: 1px solid black;
-    width: 30%;
-}
+    .ingredients {
+        float: none;
+        margin: 3% 0 3% 0;
+        width: 100%;
+    }
 
-.instructions {
-    padding: var(--pad);
-    background-color: var(--tomato);
+    ol {
+        list-style-type: none;
+    }
 }
