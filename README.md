@@ -1,30 +1,57 @@
-# Odin Recipes
+# 🍅 Odin Recipes
 
-### Cursor 
-For this website, I create a custom cursor using the `mousemove` event on Javascript. 
+A **visually dynamic recipe website** featuring a custom interactive cursor, responsive layouts, and subtle animations to bring your recipes to life.
 
-The cursor consists of a dot surrounded by an outline border that follows the dot around. 
+---
 
-The cursor is animated to move smoothly through the page.
+## ✨ Features
 
-The cursor changes color based on the color of the text that goes behind it.
+### 🖱️ Custom Cursor
 
-The cursor size scales depending on the element it currently is "touching".
+- Built using the `mousemove` event in JavaScript
+- Composed of a central dot with an animated outline that follows smoothly
+- Color changes based on the background text it hovers over
+- Automatically scales when hovering over elements
+- Enhances user interactivity and adds a sleek, modern feel
 
-### Main Page
+---
 
-The body consists of the header, the main page and the footer.
+### 🏠 Main Page
 
-The main page layout changes based on the button the user clicks. Home contains four buttons, each leading to a different recipe. The layout is responsive and the buttons look good in any screen size.
+- Contains a **header**, **main content area**, and **footer**
+- Four stylish buttons on the homepage, each leading to a different recipe
+- Responsive layout that adapts beautifully across screen sizes
+- Smooth **hover animations** on elements to create a lively user experience
+- Layout transitions based on user interaction
 
-I also added animations when hovering over the different page elements to make the webpage feel more alive.
+---
 
-### Recipe Layout
+### 🍽️ Recipe Pages
 
-I start things off with a button taking the user back to the main page. The height is automatic making this button subtle. 
+- Navigation button at the top for easy return to the homepage
+  - Subtle and auto-height to avoid clutter
+- Centered **recipe title** and **description** for clean presentation
+- Instructions listed with a **numbered list**:
+  - Each item **scales and translates on hover**, giving a sense of interaction
+- **Ingredients box**:
+  - Styled with a **bold tomato red background**
+  - Floated design allows surrounding text to wrap dynamically
+  - Responsive behavior creates a rich and adaptive layout
 
-Secondly, the title of the recipe is followed by a small desciption. Both are centered to give the user a cool introduction to the page. 
+---
 
-I use a numbered list for the instruction and I animate each instruction on hover by scaling and tranlating the text slightly to the right.
+## 🧪 Technologies Used
 
-For the ingredients I use a box filled with a tomato color to make them stand out. I also float this box to make the text of the instructions go around it when the width changes. This makes the page feel more dynamic. 
+- **HTML**
+- **CSS**
+- **JavaScript (Vanilla)**
+
+---
+
+## 🚀 Getting Started
+
+To run this project locally:
+
+1. Clone the repo:
+   ```bash
+   git clone https://github.com/yourusername/odin-recipes.git
