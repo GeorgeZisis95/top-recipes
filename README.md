@@ -54,4 +54,4 @@ To run this project locally:
 
 1. Clone the repo:
    ```bash
-   git clone https://github.com/yourusername/odin-recipes.git
+   git clone https://github.com/GeorgeZisis95/top-recipes.git
