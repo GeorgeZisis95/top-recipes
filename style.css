@@ -1,0 +1,259 @@
+/* Import fonts */
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Lato:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --primary-bg: #fcebbf;
+  --secondary-bg: #f9c74f;
+  --accent: #c96b4c;
+  --accent-hover: #ca7a5f;
+  --text: #6d4c41;
+  --text-accent: #fff;
+}
+
+/* Base font size */
+html {
+  font-size: 16px; /* 1rem = 16px */
+}
+
+/* Global reset */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Minimal button reset */
+button {
+  all: unset; /* removes all inherited and default styles */
+  display: inline-block; /* ensures it behaves like a button */
+  font-family: inherit; /* inherit font from parent */
+  font-size: inherit; /* inherit font size */
+  text-align: center;
+  cursor: pointer; /* ensures pointer on hover */
+  box-sizing: border-box; /* consistent sizing */
+}
+
+button:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+ul,
+ol {
+  list-style: none; /* removes bullets/numbers */
+}
+
+a {
+  text-decoration: none; /* remove underline */
+  color: inherit; /* inherit color */
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block; /* avoids extra bottom space */
+  max-width: 100%; /* responsive by default */
+}
+
+input,
+textarea,
+select {
+  all: unset; /* removes browser styles */
+  font: inherit; /* inherit font */
+  box-sizing: border-box;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+body {
+  line-height: 1.5;
+  background-color: var(--primary-bg);
+  color: var(--text);
+  font-family: "Amatic SC", cursive;
+}
+
+/* Page Fade out - Fade in */
+body {
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+body.visible {
+  opacity: 1;
+}
+
+/* Headings */
+h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+}
+
+h2 {
+  font-size: clamp(2rem, 4vw, 2.5rem);
+}
+
+h3 {
+  font-size: clamp(1.25rem, 3vw, 2rem);
+}
+
+a,
+button,
+ul {
+  font-family: "Amatic SC", cursive;
+  font-size: 1.25rem;
+  font-weight: 900;
+}
+
+/* Paragraphs / general text */
+p,
+li {
+  font-family: "Raleway", sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* vertical centering */
+  align-items: center; /* horizontal centering */
+  min-height: 100vh; /* full viewport height */
+  text-align: center;
+}
+
+.recipe-links ul {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem 0;
+}
+
+.recipe-links a {
+  display: block;
+  position: relative;
+  border-radius: 0.5rem;
+  text-align: center;
+}
+
+.recipe-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px; /* underline thickness */
+  width: 0;
+  background-color: var(--accent); /* underline color */
+  transition: width 0.3s ease;
+}
+
+@media (hover: hover) {
+  .recipe-links a:hover::after {
+    width: 100%;
+  }
+}
+
+.backToTop {
+  position: fixed;
+  bottom: 2rem; /* distance from bottom */
+  right: 2rem; /* distance from right */
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  background-color: var(--accent);
+  color: var(--text);
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  pointer-events: none; /* disable until shown */
+  transition:
+    opacity 0.3s,
+    background-color 0.3s;
+  z-index: 1000;
+}
+
+.backToTop:hover {
+  background-color: var(--accent-hover);
+}
+
+.recipe {
+  display: flex;
+  flex-direction: column; /* stack title and image */
+  align-items: center; /* center horizontally */
+  gap: 1rem; /* spacing between title and image */
+  padding: 2rem;
+}
+
+.recipe img {
+  width: clamp(120px, 25vw, 250px); /* adjust size as needed */
+  aspect-ratio: 1/1;
+  border-radius: 50%; /* makes the image circular */
+  object-fit: cover; /* ensures the image fills the circle without distortion */
+  border: 4px solid var(--text); /* border around the circle */
+}
+
+/* Center the main recipe content */
+.recipe {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* center horizontally */
+  gap: 1.5rem; /* space between elements */
+  padding: 2rem 1rem;
+  max-width: 800px; /* optional max width */
+  margin: 0 auto; /* center container on page */
+}
+
+.recipe section {
+  width: 100%; /* take full width of parent container */
+  max-width: 500px;
+}
+
+/* Section headings (h2) centered */
+.recipe h2 {
+  text-align: center;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  border-bottom: 2px solid; /* optional underline for clarity */
+  padding-bottom: 0.3rem;
+}
+
+/* Paragraphs centered */
+.recipe p {
+  text-align: left;
+}
+
+/* Lists centered with proper spacing */
+.recipe ul,
+.recipe ol {
+  list-style-position: inside;
+  margin: 0.5rem 0 1rem 0;
+  padding: 0;
+}
+
+/* Ordered lists (instructions) with numbers */
+.recipe ol {
+  list-style: decimal inside; /* numbers inside the content box */
+  padding-left: 0; /* remove extra left padding */
+  margin: 0.5rem 0 1rem 0;
+  text-align: left; /* keep numbers aligned */
+  width: 100%;
+  max-width: 500px;
+}
+
+/* Unordered lists (ingredients, nutrients) with bullets */
+.recipe ul {
+  list-style: disc inside; /* bullets inside content box */
+  padding-left: 0; /* remove extra left padding */
+  margin: 0.5rem 0 1rem 0;
+  text-align: left; /* align text with bullet */
+  width: 100%;
+  max-width: 500px;
+}
